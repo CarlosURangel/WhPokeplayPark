@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-size: 16px; /* Esto equivale a 1rem */
+}
+
+body {
+    font-family: 'PixelFont', sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.window {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%; /* Evita que se desborde horizontalmente */
+    max-height: 100%;
+    border: 2px solid #333;
+    background-color: white;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fa4a47;
+    height: 100px;
+    border-bottom: 20px solid #8E352C;
+}
+.logoPoke img{
+    height: 80px;
+    width: auto;
+    padding-left: 300px;
+}
+.titulo{
+    margin-right: 40px;
+    margin-top: 20px;
+    user-select: none;
+
+}
+
+.menuIcon{
+    font-size: 30px;
+    cursor: pointer;
+    color: black;
+    position: fixed;
+    top: 20px;
+    left: 40px;
+    z-index: 2;
+    user-select: none;
+}
+.menuContenido{
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    
+    top: 80px;
+    left: 40px;
+    width: 200px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+}
+.menuContenido a{
+    display: block;
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    text-align: left;
+    font-size: 18px;
+}
+
+.menuContenido a:hover{
+    background-color: #f1f1f1;
+}
+.menuContenido.mostrar{
+    display: block;
+}
+h1{
+    text-align: center;
+}
+
+.logo {
+    background: url('/pokeball.png') no-repeat center;
+    width: 2rem;
+    height: 2rem;
+}
+
+.title {
+    font-size: 1.5rem;
+}
+
+.lang-btn {
+    background: url('japan-flag.png') no-repeat center;
+    width: 2rem;
+    height: 2rem;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-start;
+    padding: 1rem;
+    flex-shrink: 0;
+}
+
+#toggle-menu {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#captured-pokemons {
+    background-color: #f0f0f0;
+    padding: 1rem;
+}
+
+#captured-pokemons h2 {
+    font-size: 1.5rem;
+}
+
+#pokemon-list {
+    list-style-type: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+}
+
+.clicker-section img {
+    width: 10rem;
+    cursor: pointer;
+}
+
+#message {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+}
+
+/* Modal de captura */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto; 
+    padding: 2rem;
+    border: 1px solid #fa4a47;
+    width: 90vw;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content img {
+    width: 8rem;
+    height: 8rem;
+}
+
+.modal-content h2 {
+    font-family: 'PixelFont', sans-serif;
+    font-size: 1.75rem;
+}
+
+.close, .close-info-modal {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#close-modal, #close-info-modal {
+    background-color: #fa4a47;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+
+#close-modal:hover, #close-info-modal:hover {
+    background-color: #d43a38;
+}
+
+/* Estilos adicionales para el nuevo modal de información */
+#pokemon-info-modal .modal-content {
+    width: 80vw;
+    max-width: 500px;
+}
+
+#info-pokemon-type {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    color: #555;
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu {
+        justify-content: center;
+    }
+
+    #toggle-menu {
+        font-size: 2rem;
+    }
+
+    .clicker-section img {
+        width: 8rem;
+    }
+
+    #message {
+        font-size: 1rem;
+    }
+}
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .pokeball-click {
+    animation: bounce 0.3s ease;
+  }

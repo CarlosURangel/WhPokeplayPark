@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe con Pokémon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="menuH">
+            <span class="menuIcon" onclick="toggleMenu()">&#9776;</span>
+            <div id="menuLinks" class="menuContenido">
+                <a href="/clicker/index.html">Juego Clicker</a>
+                <a href="/wordleJS/index.html">Juego Wordle</a>
+            </div>
+        </div>
+        <div class="logoPoke">
+            <a href="../index.html">
+                <img src="/imgs/pokeLogo.png" alt="logo">
+            </a>        </div>
+
+        <div class="titulo">
+            <h1>Pokemon | Wordle</h1>
+        </div>
+        
+    </div>
+    
+    <div class="game-container">
+        <div id="region-selector">
+            <label for="region">Seleccionar región: </label>
+            <select id="region">
+                <option value="all">Todas las regiones</option>
+                <option value="kanto">Kanto</option>
+                <option value="johto">Johto</option>
+                <option value="hoenn">Hoenn</option>
+                <option value="sinnoh">Sinnoh</option>
+                <option value="unova">Unova</option>
+                <option value="kalos">Kalos</option>
+                <option value="alola">Alola</option>
+                <option value="galar">Galar</option>
+            </select>
+            <button id="start-game">Iniciar juego</button>
+        </div>
+    
+        <div id="players">
+            <span id="player-x" class="player active">Jugador X</span> vs <span id="player-o" class="player">Jugador O</span>
+        </div>
+    
+        <div id="board">
+            <div class="cell" data-cell="0"></div>
+            <div class="cell" data-cell="1"></div>
+            <div class="cell" data-cell="2"></div>
+            <div class="cell" data-cell="3"></div>
+            <div class="cell" data-cell="4"></div>
+            <div class="cell" data-cell="5"></div>
+            <div class="cell" data-cell="6"></div>
+            <div class="cell" data-cell="7"></div>
+            <div class="cell" data-cell="8"></div>
+        </div>
+    
+        <div id="pokemon-container">
+            <img id="pokemon-image" alt="Adivina el Pokémon">
+            <input type="text" id="pokemon-input" placeholder="¿Cuál es el Pokémon?">
+            <button id="submit-guess">Adivinar</button>
+        </div>
+    
+        <div id="winner-modal" class="modal">
+            <div class="modal-content">
+                <p id="winner-message"></p>
+                <button id="restart-game">Reiniciar juego</button>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>

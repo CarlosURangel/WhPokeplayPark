@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'PixelFont', sans-serif;
+    background-color: #f8f8f8;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fa4a47;
+    height: 100px;
+    border-bottom: 20px solid #8E352C;
+}
+
+.logoPoke img{
+    height: 80px;
+    width: auto;
+    padding-left: 300px;
+}
+.titulo{
+    margin-right: 40px;
+    margin-top: 20px;
+    user-select: none;
+
+}
+
+.menuIcon{
+    font-size: 30px;
+    cursor: pointer;
+    color: black;
+    position: fixed;
+    top: 20px;
+    left: 40px;
+    z-index: 2;
+    user-select: none;
+}
+.menuContenido{
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    
+    top: 80px;
+    left: 40px;
+    width: 200px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+}
+.menuContenido a{
+    display: block;
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    text-align: left;
+    font-size: 18px;
+}
+
+.menuContenido a:hover{
+    background-color: #f1f1f1;
+}
+.menuContenido.mostrar{
+    display: block;
+}
+h1{
+    text-align: center;
+}
+.gameTitle{
+    height: 80px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+.gameTitle h2{
+    display: flex;
+    align-items: end;
+    font-size: 38px;
+    
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+    
+}
+
+
+.row{
+    display: flex;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+.square{
+    width: 62px;
+    height: 62px;
+    outline: none;
+    font-size: 50px;
+    border: 3px solid #d4d6da;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+/* Modal overlay para oscurecer el fondo */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+    z-index: 1; /* Cubre todo el contenido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal para mostrar el mensaje */
+.modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 2; /* Por encima del overlay */
+    max-width: 400px;
+    width: 80%;
+}
+
+/* Texto del modal */
+.modal p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Botón de reiniciar */
+.modal .button {
+    width: 150px;
+    height: 50px;
+    background-color: #fa4a47;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Efecto hover en el botón */
+.modal .button:hover {
+    background-color: #fff;
+    border: 2px solid #fa4a47;
+    color: #fa4a47;
+}
+
+/* Evitar scroll cuando el modal está activo */
+body.modal-open {
+    overflow: hidden;
+}
+.button{
+    width: 170px;
+    height: 60px;
+    border-radius: 9px;
+    border:none;
+    background-color: #74b710;
+    font-size:32px;
+    color: #fff;
+}
+.button:hover{
+    background-color: #fff;
+    border: 3px solid #74b710;
+    color: #74b710;
+    cursor: pointer;
+}
+.gray{
+    background-color: #797c7e;
+}
+.gold{
+    background-color: #e1ca20;
+}
+.green{
+    background-color: #7daa65;
+}

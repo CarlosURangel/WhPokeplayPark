@@ -1,0 +1,206 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #eaeff2;
+    overflow: hidden; /* Evitar el scroll */
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fa4a47;
+    height: 100px;
+    width: 100%;
+    border-bottom: 20px solid #8E352C;
+}
+.logoPoke img{
+    height: 80px;
+    width: auto;
+    padding-left: 300px;
+}
+.titulo{
+    margin-right: 40px;
+    margin-top: 20px;
+    user-select: none;
+
+}
+
+.menuIcon{
+    font-size: 30px;
+    cursor: pointer;
+    color: black;
+    position: fixed;
+    top: 20px;
+    left: 40px;
+    z-index: 2;
+    user-select: none;
+}
+.menuContenido{
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    
+    top: 80px;
+    left: 40px;
+    width: 200px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+}
+.menuContenido a{
+    display: block;
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    text-align: left;
+    font-size: 18px;
+}
+
+.menuContenido a:hover{
+    background-color: #f1f1f1;
+}
+.menuContenido.mostrar{
+    display: block;
+}
+h1{
+    text-align: center;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa el 100% del alto */
+    width: 100vw; /* Ocupa el 100% del ancho */
+    padding-top: 60px; /* Espacio para la barra superior */
+    text-align: center;
+    background-color: #ffffff;
+    overflow: auto; /* Permite que el contenido interno se desplace si es necesario */
+}
+
+/* Mejor distribución para el selector de región */
+#region-selector {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column; /* Cambiar a columna para evitar superposición */
+}
+
+#region-selector label {
+    margin-bottom: 5px; /* Espacio entre la etiqueta y el selector */
+}
+
+#players {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+/* Tablero con ajuste de tamaño */
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    width: 60vw; /* Ajustar el tablero para que quepa en pantalla */
+    height: 60vw; /* Relación 1:1 para mantener el cuadrado */
+}
+
+.cell {
+    background-color: #f0f8ff;
+    border: 2px solid #ff4d4d; /* Rojo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.cell:hover {
+    background-color: #ffd1d1; /* Color más claro en hover */
+}
+
+/* Contenedor del Pokémon centrado */
+#pokemon-container {
+    margin-top: 20px;
+    display: flex;                /* Habilitar flexbox */
+    flex-direction: column;       /* Colocar elementos en columna */
+    justify-content: center;      /* Centrar verticalmente */
+    align-items: center;          /* Centrar horizontalmente */
+    height: 100px;                /* Ajustar altura para centrar mejor */
+}
+
+#pokemon-image {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;         /* Espacio entre la imagen y el input */
+}
+
+#submit-guess {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ff4d4d; /* Rojo */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submit-guess:hover {
+    background-color: #b30000; /* Rojo más oscuro al hacer hover */
+}
+
+/* Modal del ganador */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    text-align: center;
+}
+
+#restart-game {
+    padding: 10px 20px;
+    background-color: #ff4d4d; /* Rojo */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#restart-game:hover {
+    background-color: #b30000; /* Rojo más oscuro al hacer hover */
+}
+
+.player {
+    font-weight: normal;
+    color: gray;
+}
+
+.player.active {
+    font-weight: bold;
+    color: #ff4d4d;  /* Rojo */
+}
